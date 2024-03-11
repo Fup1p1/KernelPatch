@@ -186,7 +186,7 @@ int main(int argc, char *argv[])
             fprintf(stdout, "%x\n", version);
     } else if (cmd == 'p') {
         ret = patch_update_img(kimg_path, kpimg_path, out_path, superkey, additional, kpatch_path, extra_configs,
-                               extra_config_num);
+                               extra_config_num); //  ./kptools -p -i kernel.ori -s "$SUPERKEY" -k kpimg -o kernel "$@"
     } else if (cmd == 'd') {
         ret = dump_kallsym(kimg_path);
     } else if (cmd == 'u') {
