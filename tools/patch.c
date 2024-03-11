@@ -146,7 +146,7 @@ int parse_image_patch_info(const char *kimg, int kimg_len, patched_kimg_t *pimg)
     if (!pimg->banner) tools_loge_exit("can't find linux banner\n");
 
     // patched or new
-    preset_t *old_preset = get_preset(kimg, kimg_len);
+    preset_t *old_preset = get_preset(kimg, kimg_len);//通过特征值看看是不是已经patch过的
     pimg->preset = old_preset;
 
     if (!old_preset) {
