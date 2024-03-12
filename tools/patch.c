@@ -130,7 +130,7 @@ int parse_image_patch_info(const char *kimg, int kimg_len, patched_kimg_t *pimg)
 
     // kernel image infomation
     kernel_info_t *kinfo = &pimg->kinfo;
-    if (get_kernel_info(kinfo, kimg, kimg_len)) tools_loge_exit("get_kernel_info error\n");
+    if (get_kernel_info(kinfo, kimg, kimg_len)) tools_loge_exit("get_kernel_info error\n");//识别镜像类型（UEFI或非UEFI）、确定加载参数和页面大小等
 
     // find banner
     char linux_banner_prefix[] = "Linux version ";
